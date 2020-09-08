@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_042848) do
+ActiveRecord::Schema.define(version: 2020_09_08_072000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(version: 2020_09_08_042848) do
     t.index ["location_id"], name: "index_beaches_on_location_id"
   end
 
+  create_table "journal_entries", force: :cascade do |t|
+    t.string "title"
+    t.text "entry_text"
+    t.string "date"
+    t.string "topics"
+    t.bigint "beach_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["beach_id"], name: "index_journal_entries_on_beach_id"
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string "city"
     t.string "state"
@@ -45,4 +56,5 @@ ActiveRecord::Schema.define(version: 2020_09_08_042848) do
   end
 
   add_foreign_key "attractions", "beaches"
+  add_foreign_key "journal_entries", "beaches"
 end
