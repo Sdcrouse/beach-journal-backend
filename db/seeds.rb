@@ -6,10 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# ---------------------------------------------------------------------------------------------------
+
 # Locations:
 malibu = Location.create(city: "Malibu", state: "California", country: "United States")
 lb_city = Location.create(city: "Long Beach", state: "WA", country: "USA")
 cannon = Location.create(city: "Cannon Beach", state: "Oregon", country: "United States of America")
+
+# ---------------------------------------------------------------------------------------------------
 
 # Beaches:
 long_beach = Beach.create(
@@ -42,3 +46,43 @@ surfrider = Beach.create(
   location: malibu,
   popular_activities: "Surfing (obviously), swimming, eating at Malibu Farm, enjoying the views from the Malibu Sport Fishing Pier, volleyball"
 )
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+
+# Attractions:
+wildlife = Attraction.create(
+  category: "Other",
+  name: "Wildlife",
+  description: "Sandpipers, seagulls, shellfish, sea anemones, dogs, crows, deer, horses",
+  beach: long_beach
+)
+
+kite_museum = Attraction.create(
+  category: "Places of interest",
+  name: "Kite Museum",
+  description: "A museum of kites, where you can make your own kite, see the history of kites, and view some of the oldest and biggest kites in history",
+  beach: long_beach
+)
+
+marshs = Attraction.create(
+  category: "Places of interest",
+  name: "Marsh's Free Museum",
+  description: "A museum full of oddities and fun stuff to see, most notably Jake the Alligator Man",
+  beach: long_beach
+)
+
+castaways = Attraction.create(
+  category: "Restaurants",
+  name: "Castaway's",
+  description: "A fun little restaurant in downtown Long Beach. I love the atmosphere, and their French Dip (among many other foods) is great!",
+  beach: long_beach
+)
+
+christmas_store = Attraction.create(
+  category: "Shops",
+  name: "Yuletides Christmas Shop",
+  description: "One of my favorite shops in Cannon Beach. I have NEVER seen so many ornaments in one place!",
+  beach: cannon_beach
+)
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
