@@ -12,6 +12,15 @@ class BeachSerializer
     }
   end
 
-  has_many :attractions
+  attribute :attractions do |beach|
+    beach.attractions.map do |attraction|
+      {
+        category: attraction.category,
+        name: attraction.name,
+        description: attraction.description
+      }
+    end
+  end
+
   has_many :journal_entries
 end
