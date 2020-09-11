@@ -22,5 +22,15 @@ class BeachSerializer
     end
   end
 
-  has_many :journal_entries
+  attribute :journal_entries do |beach|
+    beach.journal_entries.map do |entry|
+      {
+        id: entry.id,
+        title: entry.title,
+        topics: entry.topics,
+        date: entry.date,
+        entry_text: entry.entry_text
+      }
+    end
+  end
 end
