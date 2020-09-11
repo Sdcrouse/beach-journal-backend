@@ -1,4 +1,4 @@
-# README
+# Beach Journal
 
 ## Contributing
 
