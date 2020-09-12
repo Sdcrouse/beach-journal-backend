@@ -15,6 +15,7 @@ class BeachSerializer
   attribute :attractions do |beach|
     beach.attractions.map do |attraction|
       {
+        id: attraction.id,
         category: attraction.category,
         name: attraction.name,
         description: attraction.description
