@@ -6,6 +6,7 @@ class BeachSerializer
     loc = beach.location
 
     {
+      id: loc.id,
       city: loc.city,
       state: loc.state,
       country: loc.country
@@ -16,6 +17,7 @@ class BeachSerializer
     beach.attractions.map do |attraction|
       {
         id: attraction.id,
+        beach_id: attraction.beach_id,
         category: attraction.category,
         name: attraction.name,
         description: attraction.description
@@ -27,6 +29,7 @@ class BeachSerializer
     beach.journal_entries.map do |entry|
       {
         id: entry.id,
+        beach_id: entry.beach_id,
         title: entry.title,
         topics: entry.topics,
         date: entry.date,
