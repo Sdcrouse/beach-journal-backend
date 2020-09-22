@@ -13,4 +13,9 @@ class Api::V1::BeachesController < ApplicationController
       render plain: "We could not find this beach. Please try again.", status: :not_found
     end
   end
+
+  def create
+    puts params
+    render json: params, status: :created
+  end
 end
