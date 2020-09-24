@@ -16,6 +16,21 @@ class Api::V1::BeachesController < ApplicationController
 
   def create
     puts params
-    render json: params, status: :created
+    beach = Beach.new(beach_params)
+    beach.location = Location.find_or_initialize_by(beach_location_params)
+
+    if beach.save
+      render json: BeachSerializer.new(beach), status: :created
+    end
   end
+
+  private
+
+    def beach_params
+      params.require(:beach).permit(:name, :description, :items_to_bring, :popular_activities)
+    end
+
+    def beach_location_params
+      params[:beach].require(:location).permit(:city, :state, :country)
+    end
 end
