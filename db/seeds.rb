@@ -128,6 +128,7 @@ JournalEntry.create(
 
 JournalEntry.create(
   title: "Long Beach's Annual Kite Festival",
+  date: "August 1st",
   topics: "Kite festival, kites",
   entry_text: "I don't even know where to begin here. Long Beach has this really cool Kite Festival every August/September, and it's worth going to at least once." + 
   "I had no IDEA how many kites could fit in the sky, it's NUTS! And the varieties, too! Kites of every color, size, and shape imaginable. " + 
@@ -141,7 +142,7 @@ JournalEntry.create(
 )
 
 JournalEntry.create(
-  title: "The Fun I had at Cannon Beach",
+  date: "September 25th, 2020",
   entry_text: "A couple of years ago, I went to Cannon Beach for the first time in ages, and this time with a church group. " + 
   "Word of advice about that: If you go with a group, don't ride a school bus; there won't be any room for your legs. " + 
   "We had plenty of fun on the way there (activities, watching stuff out the windows, a rest stop in the wooded area, etc). " + 
