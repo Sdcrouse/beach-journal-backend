@@ -27,7 +27,10 @@ class Api::V1::BeachesController < ApplicationController
   private
 
     def beach_params
-      params.require(:beach).permit(:name, :description, :items_to_bring, :popular_activities)
+      params.require(:beach).permit(
+        :name, :description, :items_to_bring, :popular_activities,
+        attractions_attributes: [:category, :name, :description]
+      )
     end
 
     def beach_location_params
