@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :beaches, only: [:index, :show, :create] do
-        resources :journal_entries, only: [:create]
+        resources :journal_entries, only: [:create, :destroy]
         # Stretch goal: Refactor this with shallow nesting.
         # See https://guides.rubyonrails.org/routing.html#shallow-nesting
       end

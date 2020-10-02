@@ -7,6 +7,14 @@ class Api::V1::JournalEntriesController < ApplicationController
     end
   end
 
+  def destroy
+    journal_entry = JournalEntry.find_by_id(params[:id])
+
+    if journal_entry && journal_entry.destroy
+      render json: JournalEntrySerializer.new(journal_entry), status: :ok
+    end
+  end
+
   private
 
     def journal_entry_params
