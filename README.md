@@ -2,11 +2,14 @@
 
 Welcome to the Beach Journal app! This is my final project for the Flatiron School. It allows users to create and save beaches, as well as write journal entries for those beaches.
 
-The backend for the Beach Journal can be found here: [https://github.com/Sdcrouse/beach-journal-client](https://github.com/Sdcrouse/beach-journal-client)
+## Frontend
 
-To view a demo of this app, check out [https://www.loom.com/share/dfdc7f0bdced4f13bc0c6f935c38e892](https://www.loom.com/share/dfdc7f0bdced4f13bc0c6f935c38e892)
+The frontend for the Beach Journal can be found here: [https://github.com/Sdcrouse/beach-journal-client](https://github.com/Sdcrouse/beach-journal-client)
 
-To read my blog post for this app, go to [https://www.loom.com/share/dfdc7f0bdced4f13bc0c6f935c38e892](https://www.loom.com/share/dfdc7f0bdced4f13bc0c6f935c38e892)
+## Demo and Blog Post
+
+* [Click Here](https://www.loom.com/share/dfdc7f0bdced4f13bc0c6f935c38e892) to view a demo of the Beach Journal.
+* [Click Here](https://stevendcrouse.com/beach_journal_my_final_and_most_complicated_project) to read my blog post about the Beach Journal.
 
 ## Contributing
 
