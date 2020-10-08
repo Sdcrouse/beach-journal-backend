@@ -1,5 +1,7 @@
 # Beach Journal
 
+![Beach Journal App](./beach-journal-app.png)
+
 Welcome to the Beach Journal app! This is my final project for the Flatiron School. It allows users to create and save beaches, as well as write journal entries for those beaches. This repository contains the backend API of the project.
 
 ## Frontend
