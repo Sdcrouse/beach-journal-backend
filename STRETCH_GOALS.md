@@ -16,3 +16,5 @@
 * Unless the frontend changes this, I could put the Attractions with a category of "Other" at the bottom of the list.
 * In the controllers, add edge cases for when the data doesn't save (like sending back a 404 status and corresponding message).
 * Change a Journal Entry's date attribute into three: Day, month, and year - I may need a separate EntryDate model for that. And in that case, I could display all of the journal entries written on a specific date, if I wanted.
+* If I ever want to list the beaches belonging to a Location, I may want to include the location_id in the BeachSerializer.
+* Read over the config/database.yml file, and see what I can do (see also my Word document).
