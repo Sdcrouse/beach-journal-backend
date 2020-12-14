@@ -5,7 +5,6 @@ class Api::V1::BeachesController < ApplicationController
   end
 
   def create
-    puts params
     beach = Beach.new(beach_params)
     beach.location = Location.find_or_initialize_by(beach_location_params)
 
@@ -18,7 +17,7 @@ class Api::V1::BeachesController < ApplicationController
     beach = Beach.find_by_id(params[:id])
 
     if beach && beach.destroy
-      render json: BeachSerializer.new(beach), status: :ok
+      render json: {}, status: :ok
     end
   end
 

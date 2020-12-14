@@ -11,7 +11,7 @@ class Api::V1::JournalEntriesController < ApplicationController
     journal_entry = JournalEntry.find_by_id(params[:id])
 
     if journal_entry && journal_entry.destroy
-      render json: JournalEntrySerializer.new(journal_entry), status: :ok
+      render json: {}, status: :ok
     end
   end
 
