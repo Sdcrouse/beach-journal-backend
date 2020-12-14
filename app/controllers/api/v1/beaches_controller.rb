@@ -15,9 +15,10 @@ class Api::V1::BeachesController < ApplicationController
 
   def destroy
     beach = Beach.find_by_id(params[:id])
+    returned_json = { attractionIds: beach.attraction_ids, journalEntryIds: beach.journal_entry_ids }
 
     if beach && beach.destroy
-      render json: {}, status: :ok
+      render json: returned_json, status: :ok
     end
   end
 
