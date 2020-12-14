@@ -14,6 +14,14 @@ class Api::V1::BeachesController < ApplicationController
     end
   end
 
+  def destroy
+    beach = Beach.find_by_id(params[:id])
+
+    if beach && beach.destroy
+      render json: BeachSerializer.new(beach), status: :ok
+    end
+  end
+
   private
 
     def beach_params

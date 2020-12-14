@@ -1,7 +1,7 @@
 class Beach < ApplicationRecord
   belongs_to :location
-  has_many :attractions
-  has_many :journal_entries
+  has_many :attractions, dependent: :destroy
+  has_many :journal_entries, dependent: :destroy
 
   accepts_nested_attributes_for :attractions
 
